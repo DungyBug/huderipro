@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("http://192.168.0.21/montserrat");
+}
+
+html, body {
+    font-family: "Montserrat";
+    color: #555;
+    background: white;
+    z-index: 1;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    font-size: 200%;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.dis {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    width: 40%;
+    background: #dddddd;
+    font-size: 120%;
+    border: 10px solid #dddddd;
+    border-radius: 7px;
+}
+
+header {
+    font-size: 120%;
+}
+
+.tdh:hover {
+    background: #888;
+    transition: .1s;
+}
+
+.tdh:hover a {
+    color: #fff;
+}
+
+.tdh:hover a:visited {
+    color: #fff;
+}
+
+.tdh {
+    transition: .3s;
+}
+
+tbody {
+    padding: 0;
+}
+
+tr {
+    margin: 0;
+}
+
+.header_table {
+    width: 95%;
+    padding: 0;
+}
+
+.selected {
+    background: #ccc;
+}
+
+.selected a {
+    color: #333;
+}
+
+.selected a:visited {
+    color: #333;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    color: white;
+    padding: 0;
+}
+
+canvas {
+    image-rendering: optimizespeed;
+}
+
+.ava {
+    border-radius: 25%;
+}
+
+.container {
+    background: #dddddd;
+    border: 10px solid #dddddd;
+    border-radius: 6px;
+}
+
+.progress {
+    background: rgb(0, 120, 255);
+    height: 3px;
+    width: 0;
+}
+
+.color {
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    padding: 120px;
+}
+
+.copyright {
+    background: #555555;
+    color: #dddddd;
+    font-size: 80%;
+    border: 10px solid #555555;
+    border-radius: 5px;
+}
+
+.time {
+    color: #aaaaaa;
+}
+
+input {
+    outline: none;
+    background: #dddddd;
+    border: 10px solid #dddddd;
+    border-radius: 5px;
+    transition: .3s;
+    font-size: 110%;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+input:focus::placeholder {
+    color: #ccc;
+}
+
+input:disabled {
+    background: #bbbbbb;
+    border: 10px solid #bbbbbb;
+}
+
+input:active {
+    background: #777;
+    border-color: #777;
+    color: #dddddd;
+    transition: .3s;
+}
+
+input[type=text]:focus,input[type=password]:focus,input[type=email]:focus {
+    background: #777;
+    border-color: #777;
+    color: #dddddd;
+}
+
+button {
+    outline: none;
+    background: none;
+    padding: 10px 20px;
+    color: #555;
+    border: 2px solid #555;
+    border-left: 3px solid #555;
+    border-right: 3px solid #555;
+    border-radius: 5px;
+    font-size: 120%;
+    transition: .7s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #dddddd;
+    background: #777;
+    transition: 1s;
+    z-index: 2;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background: silver;
+    border: 10px solid silver;
+    border-radius: 10px;
+    z-index: 1;
+    transition: .2s ease-in-out;
+}
+
+button:active::after {
+    left: -150%;
+    transition: 0s ease-in-out;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+    background: #555;
+    border: 10px solid #555;
+    transition: .3s ease-in-out;
+}
+
+button:hover::before {
+    top: 0%;
+    height: 180%;
+    z-index: -1;
+}

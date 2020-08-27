@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/hudstyle">
+</head>
+<body>
+    <center>
+        <h1>Рейтинг</h1>
+        <br>
+        <input type="range" id="raiting" min="0" max="10" value="10" style="width: 40%;">
+        <div id="color" class="color" style="background: rgb(0, 255, 100)"><h1>10</h1></div>
+        <div id="type">Идеально</div>
+        <br>
+        <button id="set">ПОСТАВИТЬ</button>
+    </center>
+    <script type="text/javascript">
+        let raiting = document.getElementById("raiting");
+        let color = document.getElementById("color");
+        let type = document.getElementById("type");
+        
+        document.getElementById("set").onclick = () => {
+            fetch("setr" + raiting.value);
+        };
+
+        raiting.onmousemove = () => {
+            color.innerHTML = `<h1 style="color: white">${raiting.value}</h1>`;
+            switch(raiting.value) {
+                case '0': {
+                    color.style.background = "rgb(0, 50, 255)";
+                    type.innerHTML = "Без оценки";
+                    break;
+                };
+                case '1': {
+                    color.style.background = "rgb(255, 0, 0)";
+                    type.innerHTML = "Отвратительно";
+                    break;
+                };
+                case '2': {
+                    color.style.background = "rgb(255, 60, 0)";
+                    type.innerHTML = "Очень плохо";
+                    break;
+                };
+                case '3': {
+                    color.style.background = "rgb(255, 150, 0)";
+                    type.innerHTML = "Плохо";
+                    break;
+                };
+                case '4': {
+                    color.style.background = "rgb(255, 200, 0)";
+                    type.innerHTML = "Приемлемо";
+                    break;
+                };
+                case '5': {
+                    color.style.background = "rgb(255, 255, 0)";
+                    type.innerHTML = "Средне";
+                    break;
+                };
+                case '6': {
+                    color.style.background = "rgb(200, 255, 0)";
+                    type.innerHTML = "Нормально";
+                    break;
+                };
+                case '7': {
+                    color.style.background = "rgb(150, 255, 0)";
+                    type.innerHTML = "Хорошо";
+                    break;
+                };
+                case '8': {
+                    color.style.background = "rgb(100, 255, 0)";
+                    type.innerHTML = "Очень хорошо";
+                    break;
+                };
+                case '9': {
+                    color.style.background = "rgb(50, 255, 0)";
+                    type.innerHTML = "Замечательно";
+                    break;
+                };
+                case "10": {
+                    color.style.background = "rgb(0, 255, 100)";
+                    type.innerHTML = "Идеально";
+                    break;
+                };
+            }
+        }
+    </script>
+</body>
+</html>
